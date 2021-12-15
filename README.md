@@ -4,6 +4,7 @@ This project fetches my most played songs on Spotify and display as a REST at ht
 
 
 # Want to deploy your own Spotify most played songs?
+
 Steps:
   - Clone this repo.
   - Obtain Spotify client id, client secret, refresh token.
@@ -12,3 +13,7 @@ Steps:
     - SPOTIFY_CLIENT_SECRET
     - SPOTIFY_REFRESH_TOKEN
   - You should now be able to push the worker to Cloudflare and use the api
+
+# Resources
+- Get client id, client secret and refresh token from Spotify: https://developer.spotify.com/documentation/general/guides/authorization/
+- Cloudflare Workers: https://workers.cloudflare.com/ and https://developers.cloudflare.com/workers/get-started/guide
