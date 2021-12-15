@@ -5,8 +5,8 @@ export async function handleRequest(request: Request): Promise<Response> {
   const url = new URL(request.url)
 
   const time_range = url.searchParams.get('time_range') ?? 'short_term'
-  const limit = url.searchParams.get('time_range') ?? '20'
-  const offset = url.searchParams.get('time_range') ?? '0'
+  const limit = url.searchParams.get('limit') ?? '20'
+  const offset = url.searchParams.get('offset') ?? '0'
 
   let response = await fetch(`https://api.spotify.com/v1/me/top/tracks?time_range=${time_range}&limit=${limit}&offset=${offset}`, {
     cf: {

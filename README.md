@@ -17,3 +17,7 @@ Steps:
 # Resources
 - Get client id, client secret and refresh token from Spotify: https://developer.spotify.com/documentation/general/guides/authorization/
 - Cloudflare Workers: https://workers.cloudflare.com/ and https://developers.cloudflare.com/workers/get-started/guide
+
+
+# Develop offline
+Use `miniflare dist/worker.js --watch --debug` to debug and run the code offline
