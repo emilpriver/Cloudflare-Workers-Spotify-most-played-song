@@ -1,14 +1,14 @@
 {
-  "name": "worker-typescript-template",
+  "name": "spotify-top-songs-cloudflare-worker",
   "version": "1.0.0",
-  "description": "Cloudflare worker TypeScript template",
+  "description": "Cloudflare worker Fetching data from spotify",
   "main": "dist/worker.js",
   "scripts": {
     "build": "webpack",
     "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "test": "jest --config jestconfig.json --verbose",
-    "dev": "miniflare src/index.ts --watch --debug"
+    "dev": "wrangler dev"
   },
   "author": "author",
   "license": "MIT OR Apache-2.0",
