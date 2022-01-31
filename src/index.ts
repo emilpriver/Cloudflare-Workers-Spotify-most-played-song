@@ -28,6 +28,24 @@ router.get("/top", async request => {
   })
 })
 
+router.get('/playing', async () => {
+  const {access_token} = await getAccessToken();
+  const data = await fetch(`https://api.spotify.com/v1/me/player/currently-playing`, {
+    cf: {
+      cacheTtl: 3600,
+      cacheEverything: true,
+    },
+    headers: {
+      Authorization: `Bearer ${access_token}`
+    }
+  })
+      .then((r) => r.json())
+
+  return new Response(JSON.stringify(data), {
+    headers: {'content-type': 'application/json'},
+  })
+})
+
 router.all('*', () => new Response('Not Found.', {status: 404}))
 
 addEventListener('fetch', event => {
