@@ -3,6 +3,12 @@ import {Router} from "itty-router";
 
 const router = Router()
 
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET,HEAD,POST,OPTIONS",
+  "Access-Control-Max-Age": "86400",
+}
+
 router.get("/top", async request => {
   const {access_token} = await getAccessToken();
   const url = new URL(request.url)
@@ -26,7 +32,8 @@ router.get("/top", async request => {
   return new Response(JSON.stringify(data), {
     headers: {
       'content-type': 'application/json',
-      'Cache-Control': 'max-age=3600'
+      'Cache-Control': 'max-age=3600',
+      ...corsHeaders
     },
   })
 })
@@ -47,7 +54,8 @@ router.get('/playing', async () => {
   return new Response(JSON.stringify(data), {
     headers: {
       'content-type': 'application/json',
-      'Cache-Control': 'max-age=300'
+      'Cache-Control': 'max-age=300',
+      ...corsHeaders
     },
   })
 })
