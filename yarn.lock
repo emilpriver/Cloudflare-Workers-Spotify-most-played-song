@@ -2319,6 +2319,11 @@
     "html-escaper" "^2.0.0"
     "istanbul-lib-report" "^3.0.0"
 
+"itty-router@^2.4.10":
+  "integrity" "sha512-6z8UO4MoJRCdgLRVU++L6QTHJwU2pCAYFM8+9HjjcneRM5DqYyF5g6tsgIw24xXLFJlpvVrIzVzhjn862ZQZcQ=="
+  "resolved" "https://registry.npmjs.org/itty-router/-/itty-router-2.4.10.tgz"
+  "version" "2.4.10"
+
 "jest-changed-files@^27.0.2":
   "integrity" "sha512-eMeb1Pn7w7x3wue5/vF73LPCJ7DKQuC9wQUR5ebP9hDPpk5hzcT/3Hmz3Q5BOFpR3tgbmaWhJcMTVgC8Z1NuMw=="
   "resolved" "https://registry.npmjs.org/jest-changed-files/-/jest-changed-files-27.0.2.tgz"
